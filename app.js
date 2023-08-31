@@ -14,7 +14,10 @@ dotenv.config();
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect(
+      "mongodb+srv://booking:UA1i38dYhHffyP0z@cluster0.8n3in63.mongodb.net/?retryWrites=true&w=majority"
+    );
+    mongoose.set("strictQuery", true);
     console.log("connect to db");
   } catch (error) {
     throw error;

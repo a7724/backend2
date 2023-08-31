@@ -23,7 +23,7 @@ export const register = async (req, res, next) => {
     await newUser.save();
     const token = jwt.sign(
       { id: newUser._id, isAdmin: newUser.isAdmin },
-      process.env.JWT_KEY
+      "jwtprivatekey"
     );
     const { password, isAdmin, ...otherDetails } = newUser._doc;
     res
@@ -48,7 +48,7 @@ export const login = async (req, res, next) => {
 
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
-      process.env.JWT_KEY
+      "jwtprivatekey"
     );
 
     const { password, isAdmin, ...otherDetails } = user._doc;
