@@ -26,11 +26,11 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookieParser");
-import authRoute from "./routes/auth.js";
-import usersRoute from "./routes/users.js";
-import hotelsRoute from "./routes/hotels.js";
-import roomsRoute from "./routes/rooms.js";
-import orderRoute from "./routes/order.js";
+const authRoute = require("./routes/auth.js");
+const usersRoute = require("./routes/users.js");
+const hotelsRoute = require("./routes/hotels.js");
+const roomsRoute = require("./routes/rooms.js");
+const orderRoute = require("./routes/order.js");
 
 const app = express();
 dotenv.config();

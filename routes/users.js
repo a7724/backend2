@@ -1,11 +1,15 @@
 const express = require("express");
-import {
+const {
   updateUser,
   deleteUser,
   getUser,
   getUsers,
-} from "../controllers/user.js";
-import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
+} = require("../controllers/user.js");
+const {
+  verifyAdmin,
+  verifyToken,
+  verifyUser,
+} = require("../utils/verifyToken.js");
 
 const router = express.Router();
 
