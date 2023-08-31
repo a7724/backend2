@@ -13,4 +13,10 @@ app.get("/users", (req, res) => {
   });
 });
 
+app.get("/orders", (req, res) => {
+  res.json({
+    mesg: "hello orders",
+  });
+});
+
 app.listen(3000);
