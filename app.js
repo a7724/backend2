@@ -58,6 +58,18 @@ app.use("/hotels", hotelsRoute);
 app.use("/rooms", roomsRoute);
 app.use("/order", orderRoute);
 
+app.get("/abcusers", (req, res) => {
+  res.json({
+    mesg: "hello users",
+  });
+});
+
+app.get("/abcorders", (req, res) => {
+  res.json({
+    mesg: "hello orders",
+  });
+});
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
