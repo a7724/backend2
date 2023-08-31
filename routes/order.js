@@ -1,10 +1,6 @@
-const express = require("express");
-const {
-  createOrder,
-  deleteOrder,
-  getOrder,
-} = require("../controllers/order.js");
-const { verifyToken } = require("../utils/verifyToken.js");
+import express from "express";
+import { createOrder, deleteOrder, getOrder } from "../controllers/order.js";
+import { verifyToken } from "../utils/verifyToken.js";
 const router = express.Router();
 
 //CREATE

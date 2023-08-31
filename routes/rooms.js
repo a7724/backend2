@@ -1,13 +1,13 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   createRoom,
   deleteRoom,
   getRoom,
   getRooms,
   updateRoom,
   updateRoomAvailability,
-} = require("../controllers/room.js");
-const { verifyAdmin, verifyToken } = require("../utils/verifyToken.js");
+} from "../controllers/room.js";
+import { verifyAdmin, verifyToken } from "../utils/verifyToken.js";
 
 const router = express.Router();
 //CREATE

@@ -1,4 +1,4 @@
-const Order = require("../models/Order.js");
+import Order from "../models/Order.js";
 
 export const createOrder = async (req, res, next) => {
   const newOrder = new Order(req.body);

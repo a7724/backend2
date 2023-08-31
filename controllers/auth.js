@@ -1,9 +1,8 @@
-const bcrypt = require("bcrypt");
-const dotenv = require("dotenv");
-const jwt = require("jsonwebtoken");
-const User = require("../models/User.js");
-const { createError } = require("../utils/error.js");
-
+import User from "../models/User.js";
+import bcrypt from "bcryptjs";
+import { createError } from "../utils/error.js";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 dotenv.config();
 
 export const register = async (req, res, next) => {

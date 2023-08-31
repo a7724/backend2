@@ -1,5 +1,5 @@
-const express = require("express");
-const {
+import express from "express";
+import {
   countByCity,
   countByType,
   createHotel,
@@ -8,8 +8,8 @@ const {
   getHotelRooms,
   getHotels,
   updateHotel,
-} = require("../controllers/hotel.js");
-const { verifyAdmin, verifyToken } = require("../utils/verifyToken.js");
+} from "../controllers/hotel.js";
+import { verifyAdmin, verifyToken } from "../utils/verifyToken.js";
 const router = express.Router();
 
 //CREATE

@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken");
-const { createError } = require("../utils/error.js");
+import jwt from "jsonwebtoken";
+import { createError } from "../utils/error.js";
 
 export const verifyToken = (req, res, next) => {
   const token = req.header("xauthtoken");
