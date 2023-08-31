@@ -25,7 +25,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const cookieParser = require("cookieParser");
+// const cookieParser = require("cookieParser");
 const authRoute = require("./routes/auth.js");
 const usersRoute = require("./routes/users.js");
 const hotelsRoute = require("./routes/hotels.js");
@@ -49,7 +49,7 @@ app.use(
     origin: "*",
   })
 );
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.json());
 
 app.use("/auth", authRoute);
