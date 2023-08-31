@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/api/users", (req, res) => {
+app.get("/users", (req, res) => {
   res.json({
     mesg: "hello users",
   });
