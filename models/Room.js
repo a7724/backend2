@@ -1,23 +1,50 @@
+// import mongoose from "mongoose";
+// const RoomSchema = new mongoose.Schema(
+//   {
+//     title: {
+//       type: String,
+//       required: true,
+//     },
+//     price: {
+//       type: Number,
+//       required: true,
+//     },
+//     maxPeople: {
+//       type: Number,
+//       required: true,
+//     },
+//     desc: {
+//       type: String,
+//       required: true,
+//     },
+//     roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
+//   },
+//   { timestamps: true }
+// );
+
+// export default mongoose.model("Room", RoomSchema);
+
 import mongoose from "mongoose";
 const RoomSchema = new mongoose.Schema(
   {
-    title: {
+    hotelId: {
       type: String,
       required: true,
     },
-    price: {
+    total_inventory: {
       type: Number,
+      default: 10,
       required: true,
     },
-    maxPeople: {
+    total_reserved: {
       type: Number,
+      default: 0,
       required: true,
     },
-    desc: {
+    date: {
       type: String,
       required: true,
     },
-    roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
   },
   { timestamps: true }
 );
