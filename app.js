@@ -23,7 +23,6 @@
 //     throw error;
 //   }
 // };
-
 // app.use(
 //   cors({
 //     origin: "*",
